@@ -3,39 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <title>Anderson Oliveira</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { 
       font-family: Arial, sans-serif; 
       margin: 0; 
       padding: 0; 
       line-height: 1.6; 
-      background: #f4f4f4; 
-      color: #333;
+      color: #fff; /* texto branco para contraste */
+      position: relative;
+      min-height: 100vh;
     }
+
+    /* Fundo com overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("img/saopaulo.jpg") no-repeat center center fixed;
+      background-size: cover;
+      z-index: -2;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6); /* overlay escuro */
+      z-index: -1;
+    }
+
     header { 
-      background: #1a1a1a; 
-      color: #fff; 
-      padding: 20px; 
-      text-align: center; 
+      text-align: center;
+      padding: 10px 20px;
     }
-    nav { 
-      margin-top: 10px; 
+    .logo {
+      height: 180px; /* ajuste conforme necessário */
+      width: auto;
+      margin-bottom: 5px;
+    }
+    h1 {
+      margin: 5px 0 15px 0;
     }
     nav a { 
       margin: 0 15px; 
-      text-decoration: none; 
+      text-decoration: underline; 
       color: #fff; 
       font-weight: bold; 
     }
+
     section { 
       padding: 40px 20px; 
       max-width: 1000px; 
       margin: auto; 
-      background: #fff; 
+      background: rgba(255,255,255,0.9); /* fundo branco semi-transparente */
       margin-bottom: 20px; 
       border-radius: 8px; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      color: #000; /* texto escuro dentro das seções */
     }
     h2 { 
       color: #1a1a1a; 
@@ -48,12 +72,38 @@
     ul li::before { 
       content: "✔️ "; 
     }
+
     footer { 
-      background: #1a1a1a; 
-      color: #A9A9A9; 
+      background: rgba(0,0,0,0.8); 
+      color: #fff; 
       text-align: center; 
       padding: 15px; 
     }
+
+    /* Estilo do portfólio em GRID */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .portfolio-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+      color: #000;
+    }
+    .portfolio-img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-img:hover {
+      transform: scale(1.05);
+    }
+
     /* Responsividade */
     @media (max-width: 768px) {
       nav a { 
@@ -68,7 +118,8 @@
 </head>
 <body>
   <header>
-    <h1>Bem-vindo ao Anderson Oliveira Segurança Eletrônica</h1>
+    <img src="img/logo.png" alt="Logo Anderson Oliveira" class="logo">
+    <h1>Bem-vindos ao meu portfólio</h1>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
@@ -81,14 +132,17 @@
     <h2>Sobre mim</h2>
     <p>
       Especialista em Segurança Eletrônica & Automação<br>
-      Com 10 anos de experiência no mercado de São Paulo, atuo na linha de frente da segurança tecnológica para grandes empresas e condomínios. 
+      Com 10 anos de experiência no mercado de segurança e portaria remota em São Paulo, atuo na linha de frente da segurança tecnológica para pequenas, médias e grandes empresas e condomínios. 
       Meu foco é transformar a segurança tradicional em sistemas inteligentes, integrados e de alta performance.
     </p>
-    <h3>🛠️ Expertise Técnica</h3>
+    <h3>🛠️ Expertise Técnica e Manutenção em:</h3>
     <ul>
-      <li>Controle de Acesso de Ponta</li>
+      <li>Controle de Acesso</li>
       <li>Monitoramento Avançado (CFTV Analógico e IP)</li>
-      <li>Automação de Acessos</li>
+      <li>Automação de Acessos Pedestres e Garagens</li>
+      <li>Motores e Placas de Portões de Garagens</li>
+      <li>Interfones e Telefonia IP</li>
+      <li>Computadores e Redes (Cabeadas e Wifi)</li> 	
     </ul>
     <h3>🚀 Destaque: Portaria Autônoma</h3>
     <ul>
@@ -112,12 +166,30 @@
 
   <section id="portfolio">
     <h2>Portfólio</h2>
-    <p>Imagens ou links de trabalhos realizados.</p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="img/projeto1.jpeg" alt="Projeto de CFTV" class="portfolio-img">
+        <p>Instalação de sistema CFTV IP em condomínio</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/projeto2.jpeg" alt="Automação de portão" class="portfolio-img">
+        <p>Automação de portão com controle remoto inteligente</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/projeto3.jpeg" alt="Portaria Autônoma" class="portfolio-img">
+        <p>Implementação de portaria autônoma em edifício comercial</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/projeto4.jpeg" alt="Controle de acesso" class="portfolio-img">
+        <p>Controle de acesso com leitor facial</p>
+      </div>
+    </div>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
     <p>Email: seuemail@exemplo.com</p>
+    <p>Whatsapp: (99)99999-9999</p>
   </section>
 
   <footer>
