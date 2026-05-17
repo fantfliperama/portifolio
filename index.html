@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Anderson Oliveira</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    header { text-align: center; }
-    nav a { margin: 0 10px; text-decoration: none; color: #333; }
-    section { margin-top: 30px; }
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      line-height: 1.6; 
+      background: #f4f4f4; 
+      color: #1C1C1C;
+    }
+    header { 
+      background: #1a1a1a; 
+      color: #1C1C1C; 
+      padding: 20px; 
+      text-align: center; 
+    }
+    nav { 
+      margin-top: 10px; 
+    }
+    nav a { 
+      margin: 0 15px; 
+      text-decoration: none; 
+      color: #fff; 
+      font-weight: bold; 
+    }
+    section { 
+      padding: 40px 20px; 
+      max-width: 1000px; 
+      margin: auto; 
+      background: #fff; 
+      margin-bottom: 20px; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 { 
+      color: #1a1a1a; 
+      margin-bottom: 15px; 
+    }
+    ul { 
+      list-style: none; 
+      padding: 0; 
+    }
+    ul li::before { 
+      content: "✔️ "; 
+    }
+    footer { 
+      background: #1a1a1a; 
+      color: #A9A9A9; 
+      text-align: center; 
+      padding: 15px; 
+    }
+    /* Responsividade */
+    @media (max-width: 768px) {
+      nav a { 
+        display: block; 
+        margin: 10px 0; 
+      }
+      section { 
+        padding: 20px; 
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Bem-vindo ao Anderson Oliveira segurança eletrônica</h1>
+    <h1>Bem-vindo ao Anderson Oliveira Segurança Eletrônica</h1>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
@@ -21,48 +78,38 @@
     </nav>
   </header>
 
-    <p><section id="sobre">
-  <h2>Sobre mim</h2>
-  <p>
-    Especialista em Segurança Eletrônica & Automação<br>
-    Com 10 anos de experiência no mercado de São Paulo, atuo na linha de frente da segurança tecnológica para grandes empresas e condomínios. 
-    Meu foco é transformar a segurança tradicional em sistemas inteligentes, integrados e de alta performance.
-  </p>
-
-  <h3>🛠️ Expertise Técnica</h3>
-  <ul>
-    <li>Controle de Acesso de Ponta: Instalação e configuração de leitores faciais, digitais e sistemas de interfonia SIP/PABX.</li>
-    <li>Monitoramento Avançado: Projetos completos de CFTV (Analógico e IP) com monitoramento à distância.</li>
-    <li>Automação de Acessos: Comandos remotos para portões e garagens com foco em agilidade e segurança.</li>
-  </ul>
-
-  <h3>🚀 Destaque: Portaria Autônoma</h3>
-  <p>
-    Desenvolvi um sistema de Portaria Autônoma que elimina a necessidade de portaria física ou remota. 
-    Através desta solução, o próprio morador tem o controle total na palma da mão:
-  </p>
-  <ul>
-    <li>Atendimento de interfone diretamente pelo celular.</li>
-    <li>Liberação de acessos (pedestres e garagens) via aplicativo.</li>
-    <li>Redução drástica de custos operacionais para o condomínio.</li>
-    <li>Maior autonomia e conveniência para os usuários.</li>
-  </ul>
-</section>
-
-</p>
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>
+      Especialista em Segurança Eletrônica & Automação<br>
+      Com 10 anos de experiência no mercado de São Paulo, atuo na linha de frente da segurança tecnológica para grandes empresas e condomínios. 
+      Meu foco é transformar a segurança tradicional em sistemas inteligentes, integrados e de alta performance.
+    </p>
+    <h3>🛠️ Expertise Técnica</h3>
+    <ul>
+      <li>Controle de Acesso de Ponta</li>
+      <li>Monitoramento Avançado (CFTV Analógico e IP)</li>
+      <li>Automação de Acessos</li>
+    </ul>
+    <h3>🚀 Destaque: Portaria Autônoma</h3>
+    <ul>
+      <li>Atendimento de interfone diretamente pelo celular</li>
+      <li>Liberação de acessos via aplicativo</li>
+      <li>Redução de custos operacionais</li>
+      <li>Maior autonomia e conveniência</li>
+    </ul>
   </section>
 
- <section id="servicos">
-  <h2>Serviços</h2>
-  <ul>
-    <li><strong>Controle de Acesso de Ponta:</strong> Instalação e configuração de leitores faciais, digitais e sistemas de interfonia SIP/PABX.</li>
-    <li><strong>Monitoramento Avançado:</strong> Projetos completos de CFTV (Analógico e IP) com monitoramento à distância.</li>
-    <li><strong>Automação de Acessos:</strong> Comandos remotos para portões e garagens com foco em agilidade e segurança.</li>
-    <li><strong>Portaria Autônoma:</strong> Solução inovadora que elimina a necessidade de portaria física ou remota, com atendimento de interfone pelo celular e liberação de acessos via aplicativo.</li>
-    <li><strong>Serviços de Manutenção:</strong> Manutenção preventiva e corretiva em todos os sistemas descritos (controle de acesso, CFTV, automação e portaria autônoma), garantindo alta performance e confiabilidade contínua.</li>
-  </ul>
-</section>
-
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <ul>
+      <li><strong>Controle de Acesso de Ponta:</strong> Instalação e configuração de leitores faciais, digitais e sistemas de interfonia SIP/PABX.</li>
+      <li><strong>Monitoramento Avançado:</strong> Projetos completos de CFTV (Analógico e IP) com monitoramento à distância.</li>
+      <li><strong>Automação de Acessos:</strong> Comandos remotos para portões e garagens com foco em agilidade e segurança.</li>
+      <li><strong>Portaria Autônoma:</strong> Solução inovadora que elimina a necessidade de portaria física ou remota.</li>
+      <li><strong>Serviços de Manutenção:</strong> Preventiva e corretiva em todos os sistemas descritos.</li>
+    </ul>
+  </section>
 
   <section id="portfolio">
     <h2>Portfólio</h2>
@@ -73,5 +120,9 @@
     <h2>Contato</h2>
     <p>Email: seuemail@exemplo.com</p>
   </section>
+
+  <footer>
+    <p>© 2026 - Anderson Oliveira Segurança Eletrônica</p>
+  </footer>
 </body>
 </html>
